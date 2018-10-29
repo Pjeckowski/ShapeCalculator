@@ -18,6 +18,10 @@ namespace Calculator
                 Console.WriteLine("Wybierz kształt:");
 
                 Console.WriteLine("1: Kwadrat");
+                Console.WriteLine("2: Okrąg");
+
+                Console.WriteLine("0: Zakończ");
+
 
                 Console.Write("\n Wybór:");
 
@@ -30,6 +34,11 @@ namespace Calculator
                             shape = new Square();
                             break;
                         }
+                    case 2:
+                        {
+                            shape = new Circle();
+                            break;
+                        }
                     default:
                         {
                             continue;
@@ -38,6 +47,10 @@ namespace Calculator
 
                 double area = calculator.CalculateArea(shape);
                 Console.WriteLine($"Pole wynosi: {area}");
+                Console.WriteLine("Nacisnij dowolny przycisk aby kontynuować.");
+                Console.ReadKey();
+                Console.Clear();
+
             } while (choice != 0);
 
             Console.WriteLine("Zakonczono!");
