@@ -1,2 +1,3 @@
 # ShapeCalculator
-exercises
+exercises : Git exercises
+
